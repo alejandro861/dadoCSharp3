@@ -12,7 +12,7 @@ namespace dadoCSharp3
             Console.WriteLine("                    =         =");
             Console.WriteLine("=========================================");
             Console.WriteLine("=         =         =         =         =");
-            Console.WriteLine("=    {0}    =    {1}    =    {2}    =    {3}    #", 7 - caraCentral, 7 - caraDerecha, caraCentral, caraDerecha);
+            Console.WriteLine("=    {0}    =    {1}    =    {2}    =    {3}    =", 7 - caraCentral, 7 - caraDerecha, caraCentral, caraDerecha);
             Console.WriteLine("=         =         =         =         =");
             Console.WriteLine("=========================================");  
             Console.WriteLine("                    =         =");
@@ -49,13 +49,18 @@ namespace dadoCSharp3
             Console.WriteLine("Primer tirada de dados...");
             int[] valores = ObtenerValoresAleatorios();
             dibujarDado(valores[0], valores[1], valores[2]);
+            Console.WriteLine("");
             do
             {
 
                 tecla = Console.ReadKey(true);
                 if (tecla.Key == ConsoleKey.Enter)
                 {
+                    Console.WriteLine("");
                     Console.WriteLine("Nueva visualización...");
+                    valores = ObtenerValoresAleatorios();
+                    dibujarDado(valores[0], valores[1], valores[2]);
+                    Console.WriteLine("");
                 }
                 else if(tecla.Key != ConsoleKey.Enter && tecla.Key != ConsoleKey.Escape)
                 {
