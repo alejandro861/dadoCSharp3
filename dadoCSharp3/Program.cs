@@ -4,11 +4,30 @@ namespace dadoCSharp3
 {
     class Program
     {
+        static void DibujarDado(int caraSuperior, int caraCentral, int caraDerecha)
+        {
+
+            Console.WriteLine("                    ===========");
+            Console.WriteLine("                    =         =");
+            Console.WriteLine("                    =    {0}    =", caraSuperior);
+            Console.WriteLine("                    =         =");
+            Console.WriteLine("=========================================");
+            Console.WriteLine("=         =         =         =         =");
+            Console.WriteLine("=    {0}    =    {1}    =    {2}    =    {3}    #", 7 - caraCentral, 7 - caraDerecha, caraCentral, caraDerecha);
+            Console.WriteLine("=         =         =         =         =");
+            Console.WriteLine("=========================================");  
+            Console.WriteLine("                    =         =");
+            Console.WriteLine("                    =    {0}    =", 7 - caraSuperior);
+            Console.WriteLine("                    =         =");
+            Console.WriteLine("                    ===========");
+
+        }
         static void Main(string[] args)
         {
             ConsoleKeyInfo tecla;
             Console.WriteLine("Hello World!");
-
+            Console.WriteLine("Primer tirada de dados...");
+            DibujarDado(1, 2, 3);
             do
             {
 
