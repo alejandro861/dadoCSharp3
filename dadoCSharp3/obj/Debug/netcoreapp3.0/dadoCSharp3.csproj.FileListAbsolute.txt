@@ -1,0 +1,11 @@
+D:\Progra II\dadoCSharp3\dadoCSharp3\bin\Debug\netcoreapp3.0\dadoCSharp3.exe
+D:\Progra II\dadoCSharp3\dadoCSharp3\bin\Debug\netcoreapp3.0\dadoCSharp3.deps.json
+D:\Progra II\dadoCSharp3\dadoCSharp3\bin\Debug\netcoreapp3.0\dadoCSharp3.runtimeconfig.json
+D:\Progra II\dadoCSharp3\dadoCSharp3\bin\Debug\netcoreapp3.0\dadoCSharp3.runtimeconfig.dev.json
+D:\Progra II\dadoCSharp3\dadoCSharp3\bin\Debug\netcoreapp3.0\dadoCSharp3.dll
+D:\Progra II\dadoCSharp3\dadoCSharp3\bin\Debug\netcoreapp3.0\dadoCSharp3.pdb
+D:\Progra II\dadoCSharp3\dadoCSharp3\obj\Debug\netcoreapp3.0\dadoCSharp3.csprojAssemblyReference.cache
+D:\Progra II\dadoCSharp3\dadoCSharp3\obj\Debug\netcoreapp3.0\dadoCSharp3.AssemblyInfoInputs.cache
+D:\Progra II\dadoCSharp3\dadoCSharp3\obj\Debug\netcoreapp3.0\dadoCSharp3.AssemblyInfo.cs
+D:\Progra II\dadoCSharp3\dadoCSharp3\obj\Debug\netcoreapp3.0\dadoCSharp3.dll
+D:\Progra II\dadoCSharp3\dadoCSharp3\obj\Debug\netcoreapp3.0\dadoCSharp3.pdb
