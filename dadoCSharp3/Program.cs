@@ -4,9 +4,8 @@ namespace dadoCSharp3
 {
     class Program
     {
-        static void DibujarDado(int caraSuperior, int caraCentral, int caraDerecha)
+        static void dibujarDado(int caraSuperior, int caraCentral, int caraDerecha)
         {
-
             Console.WriteLine("                    ===========");
             Console.WriteLine("                    =         =");
             Console.WriteLine("                    =    {0}    =", caraSuperior);
@@ -20,14 +19,36 @@ namespace dadoCSharp3
             Console.WriteLine("                    =    {0}    =", 7 - caraSuperior);
             Console.WriteLine("                    =         =");
             Console.WriteLine("                    ===========");
+        }
 
+        static int[] ObtenerValoresAleatorios()
+        {
+            Random aleatorio = new Random();
+            int indice = 0;
+            int[] respuesta = new int[3];
+
+            while (indice < 3)
+            {
+                int nuevoAleatorio = aleatorio.Next(1, 7);
+
+                if (nuevoAleatorio != respuesta[0] && nuevoAleatorio != respuesta[1] && nuevoAleatorio != respuesta[2] &&
+                    7 - nuevoAleatorio != respuesta[0] && 7 - nuevoAleatorio != respuesta[1] && 7 - nuevoAleatorio != respuesta[2])
+                {
+
+                    respuesta[indice] = nuevoAleatorio;
+                    indice++;
+                }
+
+            }
+            return respuesta;
         }
         static void Main(string[] args)
         {
             ConsoleKeyInfo tecla;
             Console.WriteLine("Hello World!");
             Console.WriteLine("Primer tirada de dados...");
-            DibujarDado(1, 2, 3);
+            int[] valores = ObtenerValoresAleatorios();
+            dibujarDado(valores[0], valores[1], valores[2]);
             do
             {
 
