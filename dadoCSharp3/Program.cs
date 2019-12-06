@@ -4,21 +4,21 @@ namespace dadoCSharp3
 {
     class Program
     {
-        static void dibujarDado(int caraSuperior, int caraCentral, int caraDerecha)
+        static void dibujarDado(int caraSuperior, int caraCentral, int caraDerecha, int caraSuperior2, int caraCentral2, int caraIzquierda)
         {
-            Console.WriteLine("                    ===========");
-            Console.WriteLine("                    =         =");
-            Console.WriteLine("                    =    {0}    =", caraSuperior);
-            Console.WriteLine("                    =         =");
-            Console.WriteLine("=========================================");
-            Console.WriteLine("=         =         =         =         =");
-            Console.WriteLine("=    {0}    =    {1}    =    {2}    =    {3}    =", 7 - caraCentral, 7 - caraDerecha, caraCentral, caraDerecha);
-            Console.WriteLine("=         =         =         =         =");
-            Console.WriteLine("=========================================");  
-            Console.WriteLine("                    =         =");
-            Console.WriteLine("                    =    {0}    =", 7 - caraSuperior);
-            Console.WriteLine("                    =         =");
-            Console.WriteLine("                    ===========");
+            Console.WriteLine("                    ===========                            ===========");
+            Console.WriteLine("                    =         =                            =         =");
+            Console.WriteLine("                    =    {0}    =                            =    {1}    =", caraSuperior, caraSuperior2);
+            Console.WriteLine("                    =         =                            =         =");
+            Console.WriteLine("=========================================        =========================================");
+            Console.WriteLine("=         =         =         =         =        =         =         =         =         =");
+            Console.WriteLine("=    {0}    =    {1}    =    {2}    =    {3}    =        =    {4}    =    {5}    =    {6}    =    {7}    =", 7 - caraCentral, 7 - caraDerecha, caraCentral, caraDerecha, caraIzquierda, caraCentral2, 7 - caraIzquierda, 7 - caraCentral2);
+            Console.WriteLine("=         =         =         =         =        =         =         =         =         =");
+            Console.WriteLine("=========================================        =========================================");  
+            Console.WriteLine("                    =         =                            =         =");
+            Console.WriteLine("                    =    {0}    =                            =    {1}    =", 7 - caraSuperior, 7-caraSuperior2);
+            Console.WriteLine("                    =         =                            =         =");
+            Console.WriteLine("                    ===========                            ===========");
         }
 
         static int[] ObtenerValoresAleatorios()
@@ -46,10 +46,9 @@ namespace dadoCSharp3
         {
             ConsoleKeyInfo tecla;
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Primer tirada de dados...");
-            int[] valores = ObtenerValoresAleatorios();
-            dibujarDado(valores[0], valores[1], valores[2]);
-            Console.WriteLine("");
+            Console.WriteLine("Presione 'Enter' para tirar los dados, en cuanto desee salir presione 'Esc'...");
+            int[] valores1 = ObtenerValoresAleatorios();
+            int[] valores2 = ObtenerValoresAleatorios();
             do
             {
 
@@ -58,9 +57,15 @@ namespace dadoCSharp3
                 {
                     Console.WriteLine("");
                     Console.WriteLine("Nueva visualización...");
-                    valores = ObtenerValoresAleatorios();
-                    dibujarDado(valores[0], valores[1], valores[2]);
+                    do
+                    {
+                        valores1 = ObtenerValoresAleatorios();
+                        valores2 = ObtenerValoresAleatorios();
+                    //    Console.WriteLine("valor 1 {0} y valor 2 {1}", valores1[1], valores2[1]);  Verificación
+                    } while (valores1[1] == valores2[1]);
+                    dibujarDado(valores1[0], valores1[1], valores1[2], valores2[0], valores2[1], valores2[2]);
                     Console.WriteLine("");
+                    Console.WriteLine("La suma de los dados es de {0}...", valores1[1] + valores2[1]);
                 }
                 else if(tecla.Key != ConsoleKey.Enter && tecla.Key != ConsoleKey.Escape)
                 {
